@@ -1,0 +1,6 @@
+.DS_Store
+ESClientDemo.xcodeproj/xcuserdata
+ESClientDemo.xcodeproj/project.xcworkspace/xcuserdata
+DerivedData
+ESClientDemo/config.plist
+.README.md.swp
