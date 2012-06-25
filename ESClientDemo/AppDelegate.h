@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <RestKit/RestKit.h>
+#import <ESClient/ESClient.h>
 
 @class ViewController;
 

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <RestKit/RestKit.h>
+#import <ESClient/ESClient.h>
 
 @interface ViewController : UIViewController <RKObjectLoaderDelegate>
 

@@ -8,9 +8,6 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import <RestKit/RestKit.h>
-
-#import "ESRequest.h"
 
 @implementation AppDelegate
 
