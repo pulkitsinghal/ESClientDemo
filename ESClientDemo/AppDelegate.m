@@ -1,22 +1,63 @@
 //
 //  AppDelegate.m
-//  ESClientDemo
+//  Example
 //
-//  Created by Pulkit Singhal on 6/25/12.
+//  Created by Pulkit Singhal on 4/10/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import "AppDelegate.h"
-
 #import "ViewController.h"
+#import <RestKit/RestKit.h>
+
+#import "ESRequest.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
 
+#pragma mark - Global Instance methods
+- (void) setupESClient
+{
+    RKLogConfigureByName("RestKit/Network*", RKLogLevelTrace);
+    RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
+
+    NSString *path = [[NSBundle mainBundle] bundlePath];
+    NSString *finalPath = [path stringByAppendingPathComponent:@"config.plist"];
+    NSDictionary *plistData = [NSDictionary dictionaryWithContentsOfFile:finalPath];
+
+    // Initialize RestKit
+    RKObjectManager *manager =
+    [RKObjectManager objectManagerWithBaseURL:
+     [
+      NSURL URLWithString:[NSString stringWithFormat:@"%@://%@:%@/%@",
+                           [plistData objectForKey:@"protocol"],
+                           [plistData objectForKey:@"address"],
+                           [plistData objectForKey:@"port"],
+                           [plistData objectForKey:@"index"]]
+     ]
+    ];
+
+    // Enable automatic network activity indicator management
+    manager.client.requestQueue.showsNetworkActivityIndicatorWhenBusy = YES;
+
+    // Serialize to JSON on the wire
+    manager.serializationMIMEType = RKMIMETypeJSON;
+
+    // Set the shared manager
+    [RKObjectManager setSharedManager:manager];
+
+    // Query should always hit the /_search url
+    RKObjectRouter *router = [RKObjectManager sharedManager].router;
+    [router routeClass:[ESRequest class] toResourcePath:@"/_search"];
+}
+
+#pragma mark - Application Lifecycle Methods
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self setupESClient];
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];

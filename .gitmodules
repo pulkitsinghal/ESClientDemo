@@ -1,0 +1,6 @@
+[submodule "RestKit"]
+	path = RestKit
+	url = git://github.com/RestKit/RestKit.git
+[submodule "ESClient"]
+	path = ESClient
+	url = https://github.com/pulkitsinghal/ESClient.git
