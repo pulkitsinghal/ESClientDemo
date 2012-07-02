@@ -27,48 +27,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A7952EB01598C78200590CAA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A7952E8D1598C70E00590CAA /* RestKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 25160D1614564E810060A5C5;
-			remoteInfo = RestKit;
-		};
-		A7952EB21598C78200590CAA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A7952E8D1598C70E00590CAA /* RestKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 25160D2614564E820060A5C5;
-			remoteInfo = RestKitTests;
-		};
-		A7952EB41598C78200590CAA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A7952E8D1598C70E00590CAA /* RestKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 25160E62145651060060A5C5;
-			remoteInfo = RestKitFramework;
-		};
-		A7952EB61598C78200590CAA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A7952E8D1598C70E00590CAA /* RestKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 25160E78145651060060A5C5;
-			remoteInfo = RestKitFrameworkTests;
-		};
-		A7952EB81598C78200590CAA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A7952E8D1598C70E00590CAA /* RestKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 259C301615128079003066A2;
-			remoteInfo = RestKitResources;
-		};
-		A7952EBB1598C78A00590CAA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A7952E8D1598C70E00590CAA /* RestKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 25160D1514564E810060A5C5;
-			remoteInfo = RestKit;
-		};
 		A7952ED81598CC0E00590CAA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A7952ECE1598CC0D00590CAA /* ESClient.xcodeproj */;
@@ -120,7 +78,6 @@
 		A7952E871598C6F000590CAA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A7952E891598C6F400590CAA /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		A7952E8B1598C6F900590CAA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		A7952E8D1598C70E00590CAA /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = ../RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		A7952ECE1598CC0D00590CAA /* ESClient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ESClient.xcodeproj; path = ESClient/ESClient.xcodeproj; sourceTree = SOURCE_ROOT; };
 		A7952EE41598CE0400590CAA /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,7 +152,6 @@
 			children = (
 				A7952E891598C6F400590CAA /* libxml2.dylib */,
 				A7952ECE1598CC0D00590CAA /* ESClient.xcodeproj */,
-				A7952E8D1598C70E00590CAA /* RestKit.xcodeproj */,
 				A7952E8B1598C6F900590CAA /* QuartzCore.framework */,
 				A7952E871598C6F000590CAA /* SystemConfiguration.framework */,
 				A7952E851598C6EC00590CAA /* MobileCoreServices.framework */,
@@ -214,18 +170,6 @@
 			children = (
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		A7952EA91598C78200590CAA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A7952EB11598C78200590CAA /* libRestKit.a */,
-				A7952EB31598C78200590CAA /* RestKitTests.octest */,
-				A7952EB51598C78200590CAA /* RestKit.framework */,
-				A7952EB71598C78200590CAA /* RestKitFrameworkTests.octest */,
-				A7952EB91598C78200590CAA /* RestKitResources.bundle */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		A7952ECF1598CC0D00590CAA /* Products */ = {
@@ -253,7 +197,6 @@
 			dependencies = (
 				A7952EE31598CD9E00590CAA /* PBXTargetDependency */,
 				A7952EDF1598CCC200590CAA /* PBXTargetDependency */,
-				A7952EBC1598C78A00590CAA /* PBXTargetDependency */,
 			);
 			name = ESClientDemo;
 			productName = ESClientDemo;
@@ -283,10 +226,6 @@
 					ProductGroup = A7952ECF1598CC0D00590CAA /* Products */;
 					ProjectRef = A7952ECE1598CC0D00590CAA /* ESClient.xcodeproj */;
 				},
-				{
-					ProductGroup = A7952EA91598C78200590CAA /* Products */;
-					ProjectRef = A7952E8D1598C70E00590CAA /* RestKit.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -296,41 +235,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		A7952EB11598C78200590CAA /* libRestKit.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRestKit.a;
-			remoteRef = A7952EB01598C78200590CAA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A7952EB31598C78200590CAA /* RestKitTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = RestKitTests.octest;
-			remoteRef = A7952EB21598C78200590CAA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A7952EB51598C78200590CAA /* RestKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RestKit.framework;
-			remoteRef = A7952EB41598C78200590CAA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A7952EB71598C78200590CAA /* RestKitFrameworkTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = RestKitFrameworkTests.octest;
-			remoteRef = A7952EB61598C78200590CAA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A7952EB91598C78200590CAA /* RestKitResources.bundle */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = RestKitResources.bundle;
-			remoteRef = A7952EB81598C78200590CAA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		A7952ED91598CC0E00590CAA /* libESClient.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -374,11 +278,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A7952EBC1598C78A00590CAA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RestKit;
-			targetProxy = A7952EBB1598C78A00590CAA /* PBXContainerItemProxy */;
-		};
 		A7952EDF1598CCC200590CAA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ESClient;
